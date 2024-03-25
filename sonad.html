@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="et">
+<html lang="et" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Tarkvara sõnad</title>
@@ -10,13 +10,40 @@
 <header>
   Tarkvara sõnad
 </header>
-<input type="button" value="juhuslik sõna" onclick="randomSyna()">
-<br>
-<br>
-<div id="random-sona"></div>
-<lable for="kontroll">Krijuta sõna vene keeles</lable>
-<input type="text" id="kontroll" onchange="sonakontroll()">
-<div id ="vastus"></div>
+<!--teen tabel-->
+<table border="1">
+    <th>Eesti-Vene</th><th>Vene-Eesti</th>
 
+<tr>
+    <td><input type="button" value="juhuslik sõna" onclick="randomSyna()"></td>
+<!--    uus input juhuslik sõna-->
+    <td><input type="button" value="juhuslik sõna" onclick="randomSyna1()"></td>
+
+</tr>
+
+    <tr>
+        <td><div id="random-sona"></div></td>
+<!--        uus div random sõnaga-->
+        <td><div id="random-sona1"></div></td>
+    </tr>
+    <tr>
+        <td><lable for="kontroll">Krijuta sõna vene keeles</lable></td>
+<!--        uus label kontroll-->
+        <td><lable for="kontroll1">Krijuta sõna vene keeles</lable></td>
+    </tr>
+    <tr>
+        <td><input type="text" id="kontroll" onchange="sonakontroll()"></td>
+<!--        uus input kontrolliga-->
+        <td><input type="text" id="kontroll1" onchange="sonakontroll1()"></td>
+    </tr>
+    <tr>
+        <td><div id ="vastus"></div></td>
+<!--        uus div vastus-->
+        <td><div id ="vastus1"></div></td>
+    </tr>
+    <br>
+
+
+</table>
 </body>
 </html>
