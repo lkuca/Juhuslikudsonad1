@@ -1,3 +1,4 @@
+//glossary
 const synad= {
     'teostus': 'реализация',
     'kavand': 'план',
@@ -35,20 +36,21 @@ const synad= {
 
 
 }
+//teeb random sõnad
 function randomSyna(){
-
+    // keys = objektid  sõnastikus(glosary) synad
     const keys = Object.keys(synad)
     //random sõna
     const juhuslikSyna=keys[Math.floor(Math.random()*keys.length)]
 
-    //võtame random sõna masiivist
-
     //lisame HTML lehele
     document.getElementById("random-sona").innerHTML=juhuslikSyna;
 }
+//kontrollib sõnu
 function sonakontroll(){
-
+// const syna gets element with name kontroll
     const syna= document.getElementById("kontroll").value
+    //in element where name is vastus kontrollib if sõna = translated sõna from element random sõna
     document.getElementById("vastus").innerHTML = syna ===synad[document.getElementById("random-sona").innerHTML]
 
 }
